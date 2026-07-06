@@ -1,0 +1,123 @@
+<html>
+<head>
+    <title>Афиша</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+<header class="header">
+    <a href="index.html" class="logo">КиноАфиша</a>
+       <div class="city-select-wrapper">
+        <img id="city-icon" src="2.png" alt="город">
+        <select id="city">
+            <option>Загрузка...</option>
+        </select>
+    </div>
+    <nav class="nav">
+        <div class="nav-links">
+            <a href="afisha.html" class="active">Афиша</a>
+            <a href="kuda.html">Куда пойти</a>
+        </div>
+        <div class="nav-icons">
+            <div class="search-box-wrapper" style="display: inline-flex; align-items: center; gap: 5px;">
+                <input type="text" id="movieSearchInput" placeholder="Поиск фильма..." style="display: none; padding: 5px; border: 1px solid #ccc; border-radius: 4px;">
+                <a href="#" id="searchIconBtn"><img src="png-4.png"></a>
+            </div>
+    
+    <a href="#" id="profileBtn">
+    <img src="5.png"> </a>
+        </div>
+    </nav>
+</header>
+
+<section class="afisha-top">
+    <h1>Афиша</h1>
+    <p>Минск • Все кинотеатры</p>
+</section>
+<section class="big-filters" id="categoryFilters">
+    <button class="big-filter active" data-category="all">Все афиши</button>
+    <button class="big-filter" data-category="now">Сейчас в кино</button>
+    <button class="big-filter" data-category="kids">Для детей</button>
+    <button class="big-filter" data-category="news">Новинки недели</button>
+</section>
+<section class="sort-section">
+    <div class="sort-box date-box">
+        <input type="date" id="filterDate">
+    </div>
+    <div class="sort-box">
+        <select id="filterSession">
+            <option value="all">Сеансы</option>
+            <option value="morning">Утро</option>
+            <option value="afternoon">Обед</option>
+            <option value="evening">Вечер</option>
+        </select>
+    </div>
+    <div class="sort-box">
+        <select id="filterGenre">
+            <option value="all">Жанры</option>
+            <option value="драма">Драма</option>
+            <option value="комедия">Комедия</option>
+            <option value="фантастика">Фантастика</option>
+        </select>
+    </div>
+
+    <button class="clear-btn" id="clearFiltersBtn">Очистить</button>
+</section>
+<section class="movies-grid"></section>
+
+<footer class="footer">
+    <div>© КиноАфиша</div>
+    <div>Контакты</div>
+    <div>Поддержка</div>
+</footer>
+
+<div id="authModal" class="modal">
+    <div class="modal-content">
+        <span id="closeModal">&times;</span>
+        <div class="auth-tabs">
+            <button id="loginTab" class="active" >Вход</button>
+            <button id="registerTab" >Регистрация</button>
+        </div>
+        <div id="loginForm">
+
+            <input id="loginEmail"
+                   type="text"
+                   placeholder="Email или логин">
+
+            <input id="loginPassword"
+                   type="password"
+                   placeholder="Пароль">
+
+            <button id="loginBtn">
+                Войти
+            </button>
+
+        </div>
+
+        <div id="registerForm" style="display:none;">
+
+            <input id="registerName"
+                   type="text"
+                   placeholder="Имя">
+
+            <input id="registerEmail"
+                   type="email"
+                   placeholder="Email">
+
+            <input id="registerPassword"
+                   type="password"
+                   placeholder="Пароль">
+
+            <button id="registerBtn">
+                Зарегистрироваться
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+<script src="afisha.js"></script>
+<script src="auth.js"></script>
+<script src="movies.js"></script>
+</body>
+</html>
